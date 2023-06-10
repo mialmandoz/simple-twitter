@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   before_action :set_static_page, only: %i[ show edit update destroy ]
-
+  
   def home
   end
 
