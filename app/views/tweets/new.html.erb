@@ -1,0 +1,9 @@
+<div class="container">
+    <h1>Nuevo Tweet</h1>
+    <%= form_with model: @tweet do |f| %>
+        <div class="form-row col-6">
+            <%= f.text_field :body, placeholder: "Comparte tu estado", class: "form-control" %>
+            <%= f.submit "Guardar", class: 'btn btn-primary mt-2' %>
+        </div>
+    <% end %>
+</div>
