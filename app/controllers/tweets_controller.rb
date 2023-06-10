@@ -19,7 +19,13 @@ class TweetsController < ApplicationController
         else
             render :new
         end
-    end 
+    end
+    
+    def destroy 
+        @tweet = Tweet.find params[:id]
+        @tweet.destroy 
+        redirect_to tweets_path, notice: "Tweet eliminado con exito!" 
+    end
 
     private 
     def tweet_params 
